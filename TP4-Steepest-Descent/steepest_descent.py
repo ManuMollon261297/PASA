@@ -25,6 +25,6 @@ def steepest_descent(R, p, w0, mu, N):
         # w(n+1) = w(n) - 0.5*mu*delta_J(w)
         delta_J = p-np.dot(R,w_n)
         w_aux = w_n + mu*delta_J
-        Wt[i] = np.flip(w_aux)
+        Wt[i] = w_aux
         w_n = w_aux
     return Wt
